@@ -1,0 +1,65 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | CPU : OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/home/LoongBox/models/ggml-small.bin",
+		"language": "zh",
+		"translate": false
+	},
+	"result": {
+		"language": "zh"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:06,200"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 6200
+			},
+			"text": "今天下午三点在三楼会议时开箱木评论会,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:06,200",
+				"to": "00:00:10,200"
+			},
+			"offsets": {
+				"from": 6200,
+				"to": 10200
+			},
+			"text": "请大家提前十分钟到场,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,200",
+				"to": "00:00:15,500"
+			},
+			"offsets": {
+				"from": 10200,
+				"to": 15500
+			},
+			"text": "并且开上车车的进步报告和设施结果。"
+		}
+	]
+}

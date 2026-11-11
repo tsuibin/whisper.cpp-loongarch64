@@ -1,0 +1,10 @@
+# 测试音频合成方式
+# espeak-ng 生成中文语音，再用 ffmpeg 转成 whisper 需要的 16 kHz 单声道 WAV
+
+espeak-ng -v cmn -s 140 -w zh-long-raw.wav \
+  '今天下午三点在三楼会议室开项目评审会，请大家提前十分钟到场，并且带上这周的进度报告和测试结果。'
+ffmpeg -y -i zh-long-raw.wav -ar 16000 -ac 1 -c:a pcm_s16le zh-long.wav
+
+espeak-ng -v cmn -s 150 -w zh-short-raw.wav \
+  '今天下午三点开会，记得带上笔记本电脑。'
+ffmpeg -y -i zh-short-raw.wav -ar 16000 -ac 1 -c:a pcm_s16le zh-short.wav
